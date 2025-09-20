@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জন্ম নিবন্ধন ফরম</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.5/JsBarcode.all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <form id="birthForm">
+            <div class="form-section">
+                <h1>জন্ম নিবন্ধন ফরম</h1>
+                <h2>ব্যক্তিগত তথ্য</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nameBN">নাম (বাংলায়) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="nameBN" name="nameBN" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nameEN">নাম (ইংরেজিতে) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="nameEN" name="nameEN" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="sex">লিঙ্গ <span style="color: red; font-size: 20px;">*</span></label>
+                        <select id="sex" name="sex" required>
+                            <option value="">নির্বাচন করুন</option>
+                            <option value="Male">পুরুষ</option>
+                            <option value="Female">মহিলা</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="BirthRegNum">জন্ম নিবন্ধন নম্বর <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="BirthRegNum" name="BirthRegNum" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="Date-Birth">জন্ম তারিখ <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="Date-Birth" name="Date-Birth" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Lssu">ইস্যুর তারিখ <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="Lssu" name="Lssu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Reg">নিবন্ধনের তারিখ <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="Reg" name="Reg" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>মাতা-পিতার তথ্য</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="motherNameBN">মাতার নাম (বাংলায়) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="motherNameBN" name="motherNameBN" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="motherNameEN">মাতার নাম (ইংরেজিতে) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="motherNameEN" name="motherNameEN" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fatherNameBN">পিতার নাম (বাংলায়) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="fatherNameBN" name="fatherNameBN" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fatherNameEN">পিতার নাম (ইংরেজিতে) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="fatherNameEN" name="fatherNameEN" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>ঠিকানা সম্পর্কিত তথ্য</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="division">বিভাগ <span style="color: red; font-size: 20px;">*</span></label>
+                        <select id="division" name="division" required>
+                            <option value="">বিভাগ নির্বাচন করুন</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="district">জেলা <span style="color: red; font-size: 20px;">*</span></label>
+                        <select id="district" name="district" required disabled>
+                            <option value="">জেলা নির্বাচন করুন</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="upazila">উপজেলা <span style="color: red; font-size: 20px;">*</span></label>
+                        <select id="upazila" name="upazila" required disabled>
+                            <option value="">উপজেলা নির্বাচন করুন</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="union">ইউনিয়ন <span style="color: red; font-size: 20px;">*</span></label>
+                        <select id="union" name="union" required disabled>
+                            <option value="">ইউনিয়ন নির্বাচন করুন</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="villageBN">গ্রাম / পাড়া (বাংলায়) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="villageBN" name="villageBN" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="villageEN">গ্রাম / পাড়া (ইংরেজিতে) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="villageEN" name="villageEN" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="villageBN">গ্রাম/মহল্লা (বাংলায়) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="PolliBN" name="PolliBN" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="villageEN">গ্রাম/মহল্লা (ইংরেজিতে) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="PolliEN" name="PolliEN" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="postCodeBN">পোস্ট নাম (বাংলায়) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="postNameBN" name="postNameBN" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postCodeEN">পোস্ট নাম (ইংরেজিতে) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="postNameEN" name="postNameEN" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="postCodeBN">পোস্ট কোড (বাংলায়) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="postCodeBN" name="postCodeBN" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postCodeEN">পোস্ট কোড (ইংরেজিতে) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="postCodeEN" name="postCodeEN" required>
+                    </div>
+                </div>
+                <button type="button" id="generateBtn">পিডিএফ জেনারেট করুন</button>
+            </div>
+            
+        </form>
+        <div class="preview-section">
+            <div id="preview">
+                <div class="logo" style="display: none;"><img src="images.png" alt=""></div>
+                <div class="certificate-content">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
