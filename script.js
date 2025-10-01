@@ -5294,7 +5294,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p style="z-index: 99; font-size: 17px; font-weight: bold; ">: ${formattedDob}</p>
                         <p style="z-index: 99; font-size: 17px; font-weight: bold;">: ${dobInWords}</p>
                     </div>
-                    <div style="display: flex; margin-left: 117px;">
+                    <div style="display: flex; margin-left: 17px;">
                         <p style="margin-right: 10px; font-size: 17px; font-weight: bold;"><strong>Sex:</strong></p>
                         <p style="z-index: 99; font-size: 16px; font-weight: bold;">${sex === 'Male' ? 'Male' : 'Female'}</p>
                     </div>
@@ -5460,6 +5460,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
 
 
