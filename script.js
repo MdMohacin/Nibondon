@@ -5259,7 +5259,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div >
                     <div class="BD_BR" style="display: flex;">
-                        <img src="BDLogo.jpg" style="width: 110px; height: 110px; margin: 0px 0px 0px 210px;" alt="">
+                        <img src="BDLogo.jpg" style="width: 110px; height: 110px; margin: 0px 0px 0px 195px;" alt="">
                         <div class="barcode-container" style=" margin:40px 0px 0px 100px;">
                             <svg id="barcode"></svg>
                             <!-- <img style="width: 250px;" src="BarCode.jpg" alt=""> -->
@@ -5377,8 +5377,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Generate QR code
         const qrcode = new QRCode(document.getElementById("qrcode"), {
             text: BirthRegNum,
-            width: 115,
-            height: 115,
+            width: 125,
+            height: 125,
             colorDark : "#000000",
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
@@ -5460,6 +5460,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
 
 
