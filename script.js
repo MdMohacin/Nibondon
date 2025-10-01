@@ -5377,8 +5377,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Generate QR code
         const qrcode = new QRCode(document.getElementById("qrcode"), {
             text: BirthRegNum,
-            width: 105,
-            height: 105,
+            width: 120,
+            height: 120,
             colorDark : "#000000",
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
@@ -5460,6 +5460,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
 
 
