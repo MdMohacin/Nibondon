@@ -5259,13 +5259,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div >
                     <div class="BD_BR" style="display: flex;">
-                        <img src="BDLogo.jpg" style="width: 110px; height: 110px; margin: 0px 0px 0px 220px;" alt="">
+                        <img src="BDLogo.jpg" style="width: 110px; height: 110px; margin: 0px 0px 0px 225px;" alt="">
                         <div class="barcode-container" style=" margin:40px 0px 0px 110px;">
                             <svg id="barcode"></svg>
                             <!-- <img style="width: 250px;" src="BarCode.jpg" alt=""> -->
                         </div>
                     </div>
-                    <div class="text" style="text-transform: capitalize; text-align: center; margin: 5px 0px 0px -190px;">
+                    <div class="text" style="text-transform: capitalize; text-align: center; margin: 5px 0px 0px -100px;">
                         <h2>Government of the People’s Republic of Bangladesh</h2>
                         <h3>Office of the Registrar, Birth and Death Registration</h3>
                         <p>${unionNameEN} Union Parishad</p>
@@ -5460,6 +5460,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
 
 
