@@ -5265,7 +5265,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <!-- <img style="width: 250px;" src="BarCode.jpg" alt=""> -->
                         </div>
                     </div>
-                    <div class="text" style="text-transform: capitalize; text-align: center; margin: 5px 0px 0px --125px;">
+                    <div class="text" style="text-transform: capitalize; text-align: center; margin: 5px 0px 0px -125px;">
                         <h2>Government of the People’s Republic of Bangladesh</h2>
                         <h3>Office of the Registrar, Birth and Death Registration</h3>
                         <p>${unionNameEN} Union Parishad</p>
@@ -5460,6 +5460,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
 
 
