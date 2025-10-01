@@ -5301,7 +5301,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div class="two-column" style="margin-top: 30px;">
                     <div class="column bengali-text" style="font-size: 18px;">
-                        <div style="display: flex;">
+                        <div style="display: flex; margin-left:-15px">
                             <div style="width: 150px;">
                                 <p>নাম</p>
                                 <p>মাতার নাম</p>
@@ -5324,7 +5324,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <div class="column" style="font-size: 18px;">
                         <div style="display: flex;">
-                            <div style="width: 235px;">
+                            <div style="width: 205px;">
                                 <p>Name</p>
                                 <p>Mother</p>
                                 <p>Nationality</p>
@@ -5345,7 +5345,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                 </div>
-                <div style=" width:80%; display: flex; justify-content: space-between; margin-top: 100px;">
+                <div style=" width:95%; display: flex; justify-content: space-between; margin-top: 100px;">
                     <div style="text-align: center; font-size: 15px; font-weight:bold;">
                         <p>Seal & Signature</p>
                         <p>Assistant to Registrar</p>
@@ -5369,16 +5369,16 @@ document.addEventListener('DOMContentLoaded', function() {
         JsBarcode("#barcode", BirthRegNum, {
             format: "CODE128",
             lineColor: "#000",
-            width: 2,
-            height: 30,
+            width: 1.5,
+            height: 32,
             displayValue: false
         });
         
         // Generate QR code
         const qrcode = new QRCode(document.getElementById("qrcode"), {
             text: BirthRegNum,
-            width: 110,
-            height: 110,
+            width: 120,
+            height: 120,
             colorDark : "#000000",
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
@@ -5460,4 +5460,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
