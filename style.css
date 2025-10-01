@@ -102,11 +102,11 @@ button:hover {
 } */
 
 .logo img{
-    width: 650px;
-    margin-left:110px;
+    width: 640px;
+    margin-left:108px;
     position: absolute;
     opacity: 0.3;
-    margin-top: 290px;
+    margin-top: 301px;
     
 }
 
@@ -162,3 +162,4 @@ width: 209.97mm;
     }
 
 }
+
