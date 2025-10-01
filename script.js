@@ -5265,7 +5265,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <!-- <img style="width: 250px;" src="BarCode.jpg" alt=""> -->
                         </div>
                     </div>
-                    <div class="text" style="text-transform: capitalize; text-align: center; margin: 5px 0px 0px -60px;">
+                    <div class="text" style="text-transform: capitalize; text-align: center; margin: 5px 0px 0px -190px;">
                         <h2>Government of the People’s Republic of Bangladesh</h2>
                         <h3>Office of the Registrar, Birth and Death Registration</h3>
                         <p>${unionNameEN} Union Parishad</p>
@@ -5377,8 +5377,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Generate QR code
         const qrcode = new QRCode(document.getElementById("qrcode"), {
             text: BirthRegNum,
-            width: 120,
-            height: 120,
+            width: 150,
+            height: 150,
             colorDark : "#000000",
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
@@ -5460,5 +5460,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
 
