@@ -102,11 +102,11 @@ button:hover {
 } */
 
 .logo img{
-    width: 550px;
-    margin-left:135px;
+    width: 650px;
+    margin-left:110px;
     position: absolute;
     opacity: 0.3;
-    margin-top: 300px;
+    margin-top: 290px;
     
 }
 
@@ -141,7 +141,7 @@ width: 209.97mm;
     width: 400px;
 }
 .column p{
-    margin: 12px;
+    margin: 17px;
 }
 
 .bengali-text {
@@ -160,4 +160,5 @@ width: 209.97mm;
     .preview-section {
         display: block;
     }
+
 }
