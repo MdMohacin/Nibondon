@@ -5265,7 +5265,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <!-- <img style="width: 250px;" src="BarCode.jpg" alt=""> -->
                         </div>
                     </div>
-                    <div class="text" style="text-transform: capitalize; text-align: center; margin: 5px 0px 0px -125px;">
+                    <div class="text" style="text-transform: capitalize; text-align: center; margin: 5px 0px 0px -88px;">
                         <h2>Government of the People’s Republic of Bangladesh</h2>
                         <h3>Office of the Registrar, Birth and Death Registration</h3>
                         <p>${unionNameEN} Union Parishad</p>
@@ -5290,11 +5290,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p><strong>Date of Birth:</strong></p>
                         <p><strong>In Word:</strong></p>
                     </div>
-                    <div style="margin-left: 68px; text-transform: capitalize;">
+                    <div style="margin-left: 30px; text-transform: capitalize;">
                         <p style="z-index: 99; font-size: 17px; font-weight: bold; ">: ${formattedDob}</p>
                         <p style="z-index: 99; font-size: 17px; font-weight: bold;">: ${dobInWords}</p>
                     </div>
-                    <div style="display: flex; margin-left: 65px;">
+                    <div style="display: flex; margin-left: 117px;">
                         <p style="margin-right: 10px; font-size: 17px; font-weight: bold;"><strong>Sex:</strong></p>
                         <p style="z-index: 99; font-size: 16px; font-weight: bold;">${sex === 'Male' ? 'Male' : 'Female'}</p>
                     </div>
@@ -5460,6 +5460,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
 
 
