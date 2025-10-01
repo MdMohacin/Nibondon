@@ -5276,7 +5276,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="meinPat" style="width: 740px; margin-top: -20px; margin-left: 25px; z-index: 999;">                        
+            <div class="meinPat" style="width: 740px; margin-top: -20px; margin-left: 50px; z-index: 999;">                        
                 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
                     <p style="z-index: 99; font-size: 17px; font-weight: bold;"><strong>Date of Registration</strong><br>${DateReg}</p>
                     <div style="text-align: center;">
@@ -5460,6 +5460,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
 
 
