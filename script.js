@@ -5250,7 +5250,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const pdfContent = `
             <div style="display: flex;">
                 <div class="qr">
-                    <div style="margin: 50px 0px 0px 60px;">
+                    <div style="margin: 50px 0px 0px 50px;">
                         <div id="qrcode"></div>
                         <!-- <img style=" width: 120px;" src="QRCode.jpg" alt=""> -->
                         <h4 style="text-align: center;margin-top:5px;">YLMA</h4>
@@ -5259,7 +5259,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div >
                     <div class="BD_BR" style="display: flex;">
-                        <img src="BDLogo.jpg" style="width: 82px; height: 82px; margin: 0px 0px 0px 220px;" alt="">
+                        <img src="BDLogo.jpg" style="width: 110px; height: 110px; margin: 0px 0px 0px 220px;" alt="">
                         <div class="barcode-container" style=" margin:40px 0px 0px 120px;">
                             <svg id="barcode"></svg>
                             <!-- <img style="width: 250px;" src="BarCode.jpg" alt=""> -->
@@ -5276,7 +5276,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="meinPat" style="width: 700px; margin-top: -20px; margin-left: 50px; z-index: 999;">                        
+            <div class="meinPat" style="width: 740px; margin-top: -20px; margin-left: 25px; z-index: 999;">                        
                 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
                     <p style="z-index: 99; font-size: 17px; font-weight: bold;"><strong>Date of Registration</strong><br>${DateReg}</p>
                     <div style="text-align: center;">
@@ -5369,16 +5369,16 @@ document.addEventListener('DOMContentLoaded', function() {
         JsBarcode("#barcode", BirthRegNum, {
             format: "CODE128",
             lineColor: "#000",
-            width: 1,
-            height: 24,
+            width: 2,
+            height: 30,
             displayValue: false
         });
         
         // Generate QR code
         const qrcode = new QRCode(document.getElementById("qrcode"), {
             text: BirthRegNum,
-            width: 90,
-            height: 90,
+            width: 110,
+            height: 110,
             colorDark : "#000000",
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
@@ -5458,4 +5458,5 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return words;
     }
+
 });
