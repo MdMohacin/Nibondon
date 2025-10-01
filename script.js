@@ -5281,7 +5281,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p style="z-index: 99; font-size: 17px; font-weight: bold;"><strong>Date of Registration</strong><br>${DateReg}</p>
                     <div style="text-align: center;">
                         <p style="font-size: 20px ;"><strong>Birth Registration Number</strong></p>
-                        <p style="font-size: 19px; font-weight: bold;">${BirthRegNum}</p>
+                        <p style="font-size: 20px; font-weight: bold;">${BirthRegNum}</p>
                     </div>
                     <p style="z-index: 99; font-size: 17px; font-weight: bold;"><strong>Date of Issuance</strong><br>${DateLssu}</p>
                 </div>
@@ -5311,7 +5311,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <p>জন্মস্থান</p>
                                 <p style="margin-top: 33px;">স্থায়ী ঠিকানা</p>
                             </div>
-                            <div style="width: 200px;" style="font-size: 17.5px; text-transform: capitalize;">
+                            <div style="width:235px;" style="font-size: 17.5px; text-transform: capitalize;">
                                 <p>: ${nameBN}</p>
                                 <p>: ${motherNameBN}</p>
                                 <p>: বাংলাদেশ</p>
@@ -5324,7 +5324,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <div class="column" style="font-size: 18px;">
                         <div style="display: flex;">
-                            <div style="width: 200px;">
+                            <div style="width: 235px;">
                                 <p>Name</p>
                                 <p>Mother</p>
                                 <p>Nationality</p>
@@ -5345,7 +5345,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                 </div>
-                <div style="display: flex; justify-content: space-around; margin-top: 200px;">
+                <div style=" width:80%; display: flex; justify-content: space-between; margin-top: 100px;">
                     <div style="text-align: center; font-size: 15px; font-weight:bold;">
                         <p>Seal & Signature</p>
                         <p>Assistant to Registrar</p>
@@ -5460,3 +5460,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
