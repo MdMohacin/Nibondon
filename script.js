@@ -5259,13 +5259,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div >
                     <div class="BD_BR" style="display: flex;">
-                        <img src="BDLogo.jpg" style="width: 110px; height: 110px; margin: 0px 0px 0px 195px;" alt="">
-                        <div class="barcode-container" style=" margin:40px 0px 0px 100px;">
+                        <img src="BDLogo.jpg" style="width: 108px; height: 108px; margin: 0px 0px 0px 185px;" alt="">
+                        <div class="barcode-container" style=" margin:40px 0px 0px 91px;">
                             <svg id="barcode"></svg>
                             <!-- <img style="width: 250px;" src="BarCode.jpg" alt=""> -->
                         </div>
                     </div>
-                    <div class="text" style="text-transform: capitalize; text-align: center; margin: 5px 0px 0px -50px;">
+                    <div class="text" style="text-transform: capitalize; text-align: center; margin: 5px 0px 0px --125px;">
                         <h2>Government of the People’s Republic of Bangladesh</h2>
                         <h3>Office of the Registrar, Birth and Death Registration</h3>
                         <p>${unionNameEN} Union Parishad</p>
@@ -5345,7 +5345,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                 </div>
-                <div style=" width:91%; display: flex; justify-content: space-between; margin-top: 100px;">
+                <div style=" width:91%; display: flex; justify-content: space-between; margin-top: 120px;">
                     <div style="text-align: center; font-size: 15px; font-weight:bold;">
                         <p>Seal & Signature</p>
                         <p>Assistant to Registrar</p>
@@ -5370,15 +5370,15 @@ document.addEventListener('DOMContentLoaded', function() {
             format: "CODE128",
             lineColor: "#000",
             width: 1.7,
-            height: 32,
+            height: 27,
             displayValue: false
         });
         
         // Generate QR code
         const qrcode = new QRCode(document.getElementById("qrcode"), {
             text: BirthRegNum,
-            width: 125,
-            height: 125,
+            width: 120,
+            height: 120,
             colorDark : "#000000",
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
@@ -5460,6 +5460,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
 
 
