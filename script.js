@@ -5250,7 +5250,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const pdfContent = `
             <div style="display: flex;">
                 <div class="qr">
-                    <div style="margin: 71px 0px 0px 50px;">
+                    <div style="margin: 58px 0px 0px 50px;">
                         <div id="qrcode"></div>
                         <!-- <img style=" width: 120px;" src="QRCode.jpg" alt=""> -->
                         <h4 style="text-align: center;margin-top:5px;">YLMA</h4>
@@ -5311,7 +5311,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <p>জন্মস্থান</p>
                                 <p style="margin-top: 33px;">স্থায়ী ঠিকানা</p>
                             </div>
-                            <div style="width:235px;" style="font-size: 17.5px; text-transform: capitalize;">
+                            <div style="margin-left:-30px; width:235px;" style="font-size: 17.5px; text-transform: capitalize;">
                                 <p>: ${nameBN}</p>
                                 <p>: ${motherNameBN}</p>
                                 <p>: বাংলাদেশ</p>
@@ -5324,7 +5324,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <div class="column" style="font-size: 18px;">
                         <div style="display: flex;">
-                            <div style="width: 190px;">
+                            <div style="width: 202px;">
                                 <p>Name</p>
                                 <p>Mother</p>
                                 <p>Nationality</p>
@@ -5333,7 +5333,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <p>Place of Birth</p>
                                 <p style="margin-top: 33px;">Permanent Address</p>
                             </div>
-                            <div style="width: 350px;font-size: 17.5px; text-transform: capitalize;">
+                            <div style="margin-left: -40px; width: 350px;font-size: 17.5px; text-transform: capitalize;">
                                 <p>: ${nameEN}</p>
                                 <p>: ${motherNameEN}</p>
                                 <p>: Bangladesh</p>
@@ -5345,7 +5345,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                 </div>
-                <div style=" width:91%; display: flex; justify-content: space-between; margin-top: 120px;">
+                <div style=" width:91%; display: flex; justify-content: space-between; margin-top: 125px;">
                     <div style="text-align: center; font-size: 15px; font-weight:bold;">
                         <p>Seal & Signature</p>
                         <p>Assistant to Registrar</p>
@@ -5460,6 +5460,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
 
 
