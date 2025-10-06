@@ -62,16 +62,6 @@
             
             <div class="form-section">
                 <h2>মাতা-পিতার তথ্য</h2>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="motherNameBN">মাতার নাম (বাংলায়) <span style="color: red; font-size: 20px;">*</span></label>
-                        <input type="text" id="motherNameBN" name="motherNameBN" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="motherNameEN">মাতার নাম (ইংরেজিতে) <span style="color: red; font-size: 20px;">*</span></label>
-                        <input type="text" id="motherNameEN" name="motherNameEN" required>
-                    </div>
-                </div>
                 
                 <div class="form-row">
                     <div class="form-group">
@@ -83,6 +73,17 @@
                         <input type="text" id="fatherNameEN" name="fatherNameEN" required>
                     </div>
                 </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="motherNameBN">মাতার নাম (বাংলায়) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="motherNameBN" name="motherNameBN" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="motherNameEN">মাতার নাম (ইংরেজিতে) <span style="color: red; font-size: 20px;">*</span></label>
+                        <input type="text" id="motherNameEN" name="motherNameEN" required>
+                    </div>
+                </div>
+                
             </div>
             
             <div class="form-section">
@@ -112,6 +113,12 @@
                     <div class="form-group">
                         <label for="union">ইউনিয়ন <span style="color: red; font-size: 20px;">*</span></label>
                         <select id="union" name="union" required disabled>
+                            <option value="">ইউনিয়ন নির্বাচন করুন</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="word">ওয়ার্ড <span style="color: red; font-size: 20px;">*</span></label>
+                        <select id="word" name="word">
                             <option value="">ইউনিয়ন নির্বাচন করুন</option>
                         </select>
                     </div>
@@ -147,16 +154,6 @@
                     <div class="form-group">
                         <label for="postCodeEN">পোস্ট নাম (ইংরেজিতে) <span style="color: red; font-size: 20px;">*</span></label>
                         <input type="text" id="postNameEN" name="postNameEN" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="postCodeBN">পোস্ট কোড (বাংলায়) <span style="color: red; font-size: 20px;">*</span></label>
-                        <input type="text" id="postCodeBN" name="postCodeBN" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="postCodeEN">পোস্ট কোড (ইংরেজিতে) <span style="color: red; font-size: 20px;">*</span></label>
-                        <input type="text" id="postCodeEN" name="postCodeEN" required>
                     </div>
                 </div>
                 <button type="button" id="generateBtn">জেনারেট করুন</button>
