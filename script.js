@@ -5424,42 +5424,55 @@ document.addEventListener('DOMContentLoaded', function() {
         return `${days[day-1]} of ${months[month]} ${yearInWords}`;
     }
     
-    function convertYearToWords(year) {
+   function convertYearToWords(year) {
         const units = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
-        const teens = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 
-                        'Seventeen', 'Eighteen', 'Nineteen'];
+        const teens = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen',
+                       'Seventeen', 'Eighteen', 'Nineteen'];
         const tens = ['', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
-        
-        if (year < 2000 || year > 2099) {
-            return year.toString(); // Only handle years from 2000 to 2099 for simplicity
-        }
-        
-        if (year === 2000) {
-            return 'Two Thousand';
-        }
-        
-        let words = 'Two Thousand';
-        const remainder = year - 2000;
-        
-        if (remainder > 0) {
-            if (remainder < 10) {
-                words += ' ' + units[remainder];
-            } else if (remainder < 20) {
-                words += ' ' + teens[remainder - 10];
-            } else {
+    
+        // ✅ Handle 1900–1999
+        if (year >= 1900 && year < 2000) {
+            const remainder = year - 1900;
+            let words = 'Nineteen';
+            if (remainder === 0) return 'Nineteen Hundred';
+            else if (remainder < 10) words += ' ' + units[remainder];
+            else if (remainder < 20) words += ' ' + teens[remainder - 10];
+            else {
                 const ten = Math.floor(remainder / 10);
                 const unit = remainder % 10;
                 words += ' ' + tens[ten];
-                if (unit > 0) {
-                    words += ' ' + units[unit];
-                }
+                if (unit > 0) words += ' ' + units[unit];
             }
+            return words;
         }
-        
-        return words;
+    
+        // ✅ Handle 2000–2099
+        if (year >= 2000 && year < 2100) {
+            const remainder = year - 2000;
+            let words = 'Two Thousand';
+            if (remainder === 0) return words;
+            else if (remainder < 10) words += ' ' + units[remainder];
+            else if (remainder < 20) words += ' ' + teens[remainder - 10];
+            else {
+                const ten = Math.floor(remainder / 10);
+                const unit = remainder % 10;
+                words += ' ' + tens[ten];
+                if (unit > 0) words += ' ' + units[unit];
+            }
+            return words;
+        }
+    
+        // ✅ Default fallback (যদি 1900–2099 এর বাইরে হয়)
+        return year.toString();
     }
+    
+    // 🔹 Example Test:
+    const testDate = new Date('1999-06-24');
+    console.log(getDateInWords(testDate)); 
+    // Output: "Twenty Fourth of June Nineteen Ninety Nine"
 
 });
+
 
 
 
