@@ -5112,6 +5112,23 @@ unions: [
 {"id":"4538","upazilla_id":"491","name":"Rouha","bn_name":"রৌহা","url":"rouhaup.netrokona.gov.bd"},
 {"id":"4539","upazilla_id":"491","name":"Medni","bn_name":"মেদনী","url":"medniup.netrokona.gov.bd"},
 {"id":"4540","upazilla_id":"491","name":"Kaliara Babragati","bn_name":"কালিয়ারা গাবরাগাতি","url":"kaliaragabragatiup.netrokona.gov.bd"}
+],
+word: [
+{"id":"1","EN_numbor":"1","bn_numbor":"১"},
+{"id":"2","EN_numbor":"2","bn_numbor":"২"},
+{"id":"3","EN_numbor":"3","bn_numbor":"৩"},
+{"id":"4","EN_numbor":"4","bn_numbor":"৪"},
+{"id":"5","EN_numbor":"5","bn_numbor":"৫"},
+{"id":"6","EN_numbor":"6","bn_numbor":"৬"},
+{"id":"7","EN_numbor":"7","bn_numbor":"৭"},
+{"id":"8","EN_numbor":"8","bn_numbor":"৮"},
+{"id":"9","EN_numbor":"9","bn_numbor":"৯"},
+{"id":"10","EN_numbor":"10","bn_numbor":"১০"},
+{"id":"11","EN_numbor":"11","bn_numbor":"১১"},
+{"id":"12","EN_numbor":"12","bn_numbor":"১২"},
+{"id":"13","EN_numbor":"13","bn_numbor":"১৩"},
+{"id":"14","EN_numbor":"14","bn_numbor":"১৪"},
+{"id":"15","EN_numbor":"15","bn_numbor":"১৫"},
 ]
 };
 document.addEventListener('DOMContentLoaded', function() {
@@ -5189,6 +5206,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    const word = document.getElementById('word');
+    bangladeshData.word.forEach(words => {
+        const option = document.createElement('option');
+        option.value = words.id;
+        option.textContent = words.bn_numbor;
+        option.dataset.english = words.EN_numbor;
+        word.appendChild(option);
+    });
+    
     const generateBtn = document.getElementById('generateBtn');
     
     generateBtn.addEventListener('click', function() {
@@ -5228,6 +5254,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const union = document.getElementById('union');
         const unionNameBN = union.options[union.selectedIndex].text;
         const unionNameEN = union.options[union.selectedIndex].dataset.english;
+        const ward = document.getElementById('word');
+        const wardBN = ward.options[ward.selectedIndex].text;
+        const wardEN = ward.options[ward.selectedIndex].dataset.english;
         const villageBN = document.getElementById('villageBN').value;
         const PolliBN = document.getElementById('PolliBN').value;
         const PolliEN = document.getElementById('PolliEN').value;
@@ -5318,7 +5347,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <p>: ${fatherNameBN}</p>
                                 <p>: বাংলাদেশ</p>
                                 <p>: ${districtNameBN}, বাংলাদেশ</p>
-                                <p style="margin-top: 33px; text-transform: capitalize;">: ${PolliBN}- ${villageBN},  ${postNameBN} -${postCodeBN}, ${unionNameBN}, ${upazilaNameBN}, ${districtNameBN}</p>
+                                <p style="margin-top: 33px; text-transform: capitalize;">: ${PolliBN}- ${villageBN}, ${postNameBN}, ওয়ার্ড - ${wardBN}, ${unionNameBN}, ${upazilaNameBN}, ${districtNameBN}</p>
                             </div>
                         </div>
                     </div>
@@ -5340,7 +5369,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <p>: ${fatherNameEN}</p>
                                 <p>: Bangladesh</p>
                                 <p>: ${districtNameEN}, Bangladesh</p>
-                                <p style="margin-top: 33px; text-transform: capitalize;">: ${PolliEN}- ${villageEN}, ${postNameEN} -${postCodeEN}, ${unionNameEN}, ${upazilaNameEN}, ${districtNameEN}</p>
+                                <p style="margin-top: 33px; text-transform: capitalize;">: ${PolliEN}- ${villageEN}, ${postNameEN}, Ward - ${wardEN}, ${unionNameEN}, ${upazilaNameEN}, ${districtNameEN}</p>
                             </div>
                         </div>
                     </div>
@@ -5369,7 +5398,7 @@ document.addEventListener('DOMContentLoaded', function() {
         JsBarcode("#barcode", BirthRegNum, {
             format: "CODE128",
             lineColor: "#000",
-            width: 1.7,
+            width: 1.5,
             height: 27,
             displayValue: false
         });
@@ -5472,6 +5501,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Output: "Twenty Fourth of June Nineteen Ninety Nine"
 
 });
+
 
 
 
