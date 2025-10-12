@@ -5263,8 +5263,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const postNameBN = document.getElementById('postNameBN').value;
         const postNameEN = document.getElementById('postNameEN').value;
         const villageEN = document.getElementById('villageEN').value;
-        const postCodeBN = document.getElementById('postCodeBN').value;
-        const postCodeEN = document.getElementById('postCodeEN').value;
 
         document.querySelector(".logo").style.display="block";
         
@@ -5501,6 +5499,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Output: "Twenty Fourth of June Nineteen Ninety Nine"
 
 });
+
 
 
 
